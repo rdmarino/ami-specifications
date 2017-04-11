@@ -1,5 +1,9 @@
 # Digital Asset Technical Specifications
 
+This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corressponding information about shipping, handeling, and documentation / reporting, please see:
+
+![ami-handleing](https://github.com/NYPL/ami-handling)
+
 ## Table Of Contents
 <!-- MarkdownTOC -->
 
@@ -20,6 +24,7 @@
     - [Digital asset packaging](#digital-asset-packaging)
 
 <!-- /MarkdownTOC -->
+
 
 
 <a name="digital-asset-technical-specifications-audio"></a>
