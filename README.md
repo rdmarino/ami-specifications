@@ -1,27 +1,51 @@
 # Digital Asset Technical Specifications
 
-This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corressponding information about shipping, handling and reporting, please see:
+This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corresponding information about shipping, handling and reporting, please see:
 
 ![ami-handling](https://github.com/NYPL/ami-handling)
 
 ## Table Of Contents
 <!-- MarkdownTOC -->
 
-  - [Digital Asset Technical Specifications: Audio](#digital-asset-technical-specifications-audio)
-    - [General information: audio](#general-information-audio)
-    - [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
-    - [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
+- [Digital Asset Technical Specifications: Audio](#digital-asset-technical-specifications-audio)
+  - [General information: audio](#general-information-audio)
+  - [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
+    - [General audio guidelines](#general-audio-guidelines)
+    - [Specific NYPL Requirements](#specific-nypl-requirements)
+    - [Signal extraction](#signal-extraction)
+    - [Audio group 1: analog audio](#audio-group-1-analog-audio)
+    - [Audio group 2: digital audio](#audio-group-2-digital-audio)
+    - [Audio group 3: optical](#audio-group-3-optical)
+  - [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
+    - [Edit Master Alterations](#edit-master-alterations)
     - [All audio groups](#all-audio-groups)
-  - [Digital Asset Technical Specifications: Video](#digital-asset-technical-specifications-video)
-    - [General information: video](#general-information-video)
-    - [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
-    - [Service Copy file specifications: video](#service-copy-file-specifications-video)
-  - [Digital Asset Technical Specifications: Metadata](#digital-asset-technical-specifications-metadata)
-    - [Metadata specifications](#metadata-specifications)
-  - [Digital Asset Structure](#digital-asset-structure)
-    - [File name and file structure specifications](#file-name-and-file-structure-specifications)
-    - [Digital asset delivery](#digital-asset-delivery)
-    - [Digital asset packaging](#digital-asset-packaging)
+- [Digital Asset Technical Specifications: Video](#digital-asset-technical-specifications-video)
+  - [General information: video](#general-information-video)
+  - [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
+    - [General guidelines](#general-guidelines)
+    - [Video group 1](#video-group-1)
+    - [Video group 2](#video-group-2)
+    - [Video group 3](#video-group-3)
+  - [Service Copy file specifications: video](#service-copy-file-specifications-video)
+    - [All video groups](#all-video-groups)
+- [Digital Asset Technical Specifications: Metadata](#digital-asset-technical-specifications-metadata)
+  - [Metadata specifications](#metadata-specifications)
+    - [Metadata file specifications](#metadata-file-specifications)
+    - [Metadata content](#metadata-content)
+    - [JSON "Notes" Fields](#json-notes-fields)
+    - [Metadata errors](#metadata-errors)
+    - [Audio channel / tack configurations and terminology matrix](#audio-channel--tack-configurations-and-terminology-matrix)
+- [Digital Asset Structure](#digital-asset-structure)
+  - [File name and file structure specifications](#file-name-and-file-structure-specifications)
+    - [File names](#file-names)
+    - [Item structure](#item-structure)
+    - [File role](#file-role)
+    - [Item component chart](#item-component-chart)
+  - [Digital asset delivery](#digital-asset-delivery)
+  - [Digital asset packaging](#digital-asset-packaging)
+    - [Primary root directories](#primary-root-directories)
+    - [Sample root directory structure that contains all possible bags:](#sample-root-directory-structure-that-contains-all-possible-bags)
+    - [Bagit requirements](#bagit-requirements)
 
 <!-- /MarkdownTOC -->
 
@@ -40,6 +64,7 @@ This document outlines the technical specifications and requirements for digitiz
 
 <a name="preservation-master-file-specifications-audio"></a>
 ### Preservation Master file specifications: audio
+<a name="general-audio-guidelines"></a>
 #### General audio guidelines
 * **Preservation Master:** The preservation master (PM) is the highest level derivative of the original recording, and is created in an effort to produce an authentic sonic facsimile of the original recording.  Therefore, the preservation master recording will represent an unedited, unaltered, direct, and complete capture of the signal from the output of the playback device.
 
@@ -49,6 +74,7 @@ This document outlines the technical specifications and requirements for digitiz
 
 * The Contractor shall notify NYPL whenever these guidelines cannot be met, and described the proposed process. Work cannot commence without NYPL approval of proposed processed.
 
+<a name="specific-nypl-requirements"></a>
 #### Specific NYPL Requirements
 ##### Object-file relationships and special circumstances
 * **Faces:** In general, one preservation master file will be generated for each physically or technically discrete recording area of the original object.
@@ -61,6 +87,7 @@ This document outlines the technical specifications and requirements for digitiz
   * There may be rare circumstances in which just the Edit Master from a PM will exceed the 4GB WAV limit (i.e. when mixing mono to stereo). In this case, the Edit Master must be split into multiple Parts, but the PM should not be split or captured as multiple parts - it must remain a single file. A note must be added to the metadata deliverables describing this circumstance.
   * **File overlap:** If multiple PMs are created for a single recording due to either speed changes or size limitations (Regions or Parts), the cut should be made at a logical break in the audible content (if at all possible), and there must be exactly 5 seconds of audible content overlapping between the tail of the first PM and the head of the following PM so that the regions/parts may be recombined in the future if necessary.
 
+<a name="signal-extraction"></a>
 #### Signal extraction
 * IASA-TC 04: Signal extraction from analog original audio recordings will comply with the technical recommendations, practices and strategies outlined in the International Association of Audiovisual Archives’, Guidelines on the Production and Preservation of Digital Audio Objects, IASA-TC 04, 2nd edition, Chapter 5 (Signal Extraction from Original Carriers).
 * Optimal signal extraction for the production of Preservation Master files should aim to capture the complete dynamic and frequency ranges of the original recording.
@@ -74,6 +101,7 @@ This document outlines the technical specifications and requirements for digitiz
 * Preservation master files may be one or two-channel (interleaved), and the configuration employed will be determined by the needs of the original recording.
 * Levels may be adjusted ONLY if there is severe distortion or digital clipping from the source, and this adjustment must be noted clearly in the metadata.
 
+<a name="audio-group-1-analog-audio"></a>
 #### Audio group 1: analog audio
 ##### Format types: analog open reel, analog cassette, wire
 ##### File specifications
@@ -87,6 +115,7 @@ This document outlines the technical specifications and requirements for digitiz
 * Analog signals will be converted to a digital bitstream by means of an Analog-to-Digital converter which complies with the specifications in FADGI’s Audio Analog-to-Digital Converter Performance Specification and Test Method.
 * No signal processing will be applied to the Analog-to-Digital converter’s digital bitstream; this would include equalization, level adjustment, dither, noise reduction, etc.
 
+<a name="audio-group-2-digital-audio"></a>
 #### Audio group 2: digital audio
 ##### Format types: digital audio tapes, etc.
 ##### File specifications
@@ -98,6 +127,7 @@ This document outlines the technical specifications and requirements for digitiz
 ##### Additional details
 * **Example:** a DAT recorded at 48/16 should be captured as a 48/16 Broadcast WAV file.
 
+<a name="audio-group-3-optical"></a>
 #### Audio group 3: optical
 ##### Format types: optical discs
 ##### File specifications: [deprecate in 2017]
@@ -112,6 +142,7 @@ This document outlines the technical specifications and requirements for digitiz
 
 <a name="edit-master-file-specifications-audio"></a>
 ### Edit Master file specifications: audio
+<a name="edit-master-alterations"></a>
 #### Edit Master Alterations
 The Edit Master serves as a production master – the recording from which all Service Copies for the Preservation Master will be derived.  It is a version of the Preservation Master which has been edited and/or processed to enhance the continuity and intelligibility of its content.
 
@@ -129,20 +160,22 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 * Conversion of one-channel audio to two-channel audio (i.e. mono to dual-mono).
 
 <a name="all-audio-groups"></a>
-### All audio groups
-#### Format types: All audio groups and format types follow the same specifications for edit masters.
-#### File specifications
+#### All audio groups
+##### Format types: All audio groups and format types follow the same specifications for edit masters.
+##### File specifications
 * Format: Broadcast Wave (BWF)
 * Audio data encoding: PCM
 * Bit depth:  equal to the Preservation Master
 * Sampling rate: equal to the Preservation Master
 * Number of audio channels: 2 (dual-mono or stereo)
 
-#### Preservation Master - Edit Master relationships and special circumstances
+##### Preservation Master - Edit Master relationships and special circumstances
 * In general, one Edit Master will be created for each Preservation Master file.
-##### Multi-track:
+
+**Multi-track:**
 * Tapes with more than 2 streams of audio are considered multi-track. For multi-track recordings, Edit masters should not be created (except in the very rare occurrence that each track is being considered a separate Face, rather than a separate Stream - see Item Structure for more detail).
-##### File size limitation
+
+**File size limitation:**
 * Some Edit Masters may be larger than their Preservation Masters. Due to the 4GB file size limit for WAV, the resulting change in file size may require creation of multiple Edit Masters for a single Preservation Master. See Specific NYPL Requirements for Preservation Masters above.
 
 <a name="digital-asset-technical-specifications-video"></a>
@@ -158,6 +191,7 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 
 <a name="preservation-master-file-specifications-video"></a>
 ### Preservation Master file specifications: video
+<a name="general-guidelines"></a>
 #### General guidelines
 * Characteristics intrinsic to the broadcast standard of the source material, including frame rate, pixel aspect ratio, interlacing, resolution, and recording standard (NTSC, PAL, SECAM, etc.) should be preserved.
 
@@ -172,6 +206,7 @@ If present on the source tape, closed captions must be captured.
 * For Preservation Masters, an .srt sidecar file must be created and accompany the Preservation Master file.
 * For Service Copies, closed captioning must be embedded in CEA-608 format.
 
+<a name="video-group-1"></a>
 #### Video group 1
 ##### Format types: analog and digital cassettes, analog open reel
 ##### File specifications: 10-bit [deprecate in 2017]
@@ -222,6 +257,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 * Timecode
   * Timecode (LTC and VITC) should be captured in the configuration as recorded on the media.
 
+<a name="video-group-2"></a>
 #### Video group 2
 ##### Format types:  DV (digital video) cassettes
 
@@ -246,6 +282,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 * DV/MiniDV objects should be captured with the DV codec
 * DVCPRO objects with the DVCPRO codec, etc.  
 
+<a name="video-group-3"></a>
 #### Video group 3
 ##### Format types: optical discs
 ##### File specifications
@@ -255,6 +292,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 ### Service Copy file specifications: video
 **Note:** As of 2016, NYPL uses Amazon Web Services (AWS) to deliver service copy files to patrons. Files are delivered to AWS via the Amazon Elastic Transcoder, by which the files pass through an additional level of transcoding. These specifications account for these automated post-digitization processes.
 
+<a name="all-video-groups"></a>
 #### All video groups
 ##### File specifications
 
@@ -293,6 +331,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 ### Metadata specifications
 **Note:** Specifications may be modified to reflect found media, newly discovered issues, changes in best practices, or NYPL goals.
 
+<a name="metadata-file-specifications"></a>
 #### Metadata file specifications
 * File format: JSON
 * Metadata schema: the NYPL AMI metadata schema must be used.
@@ -305,6 +344,7 @@ github.com/nypl/ami-metadata.
   * Correct: [filename].json
   * Incorrect: [filename].mov.json
 
+<a name="metadata-content"></a>
 #### Metadata content
 * The required contents of the metadata files are defined by the JSON metadata schema provided by NYPL, described in the previous section. According to that schema, vendors must produce metadata for each deliverable that includes designated categories.
   * Bibliographic:** about the physical media item (provided by NYPL).
@@ -321,6 +361,7 @@ github.com/nypl/ami-metadata.
   * Fields listed as “Optional”, may contain a value. If there is no value, they must not be included in the metadata file. (Do not include empty optional fields.)
   * Fields listed as “Not Applicable” to a given format or media type must not be included in the metadata file. (Do not include “Not applicable fields.)
 
+<a name="json-notes-fields"></a>
 #### JSON "Notes" Fields
 
 Please refer to the following usage guide for the various "notes" fields included in the schema:
@@ -331,10 +372,12 @@ Please refer to the following usage guide for the various "notes" fields include
 - **source.notes.physicalConditionPreShipNotes:** NYPL added - no additional input required
 - **digitizationProcess.notes.processNotes:** rehousing, adding leader, baking, cleaning
 
+<a name="metadata-errors"></a>
 #### Metadata errors
 * If misidentified/miscataloged the technical characteristics or format of an asset have been provided (i.e. NYPL-generated metadata lists an asset as an audio cassette and it is actually a video recording), please submit corrected JSON. Make any changes to source object metadata elements that would be appropriate, and note the correction in the JSON files "digitization.notes.processNotes". Example text:
   * "NYPL-provided metadata incorrectly listed [insert field name here] as [insert wrong content here]; JSON reflects correct [field name]"
 
+<a name="audio-channel--tack-configurations-and-terminology-matrix"></a>
 #### Audio channel / tack configurations and terminology matrix
 
 ![Audio grid](NYPL_audioGrid_2017.jpg)
@@ -345,6 +388,7 @@ Please refer to the following usage guide for the various "notes" fields include
 <a name="file-name-and-file-structure-specifications"></a>
 ### File name and file structure specifications
 
+<a name="file-names"></a>
 #### File names
 * NYPL will provide the Contractor with a filename root for each original item, consisting of a three-letter prefix, the primary ID, a volume number (and a face number for audio items), and a two-letter suffix indicating the role of the file.  These sections are each separated by an underscore. For example:
   * (prefix)_(primary ID)_(item structure)_(file role).(ext)
@@ -352,17 +396,20 @@ Please refer to the following usage guide for the various "notes" fields include
   * Audio: myh_lt10a2345_v01f01_pm
 * The Contractor is responsible for creating file names in order to represent additional face, region, stream, or part elements and file roles.
 
+<a name="item-structure"></a>
 #### Item structure
 * A file name must use the following components to represent the portion of a physical media item represented by the file.
 * A file name must use the following components to represent the portion of a physical media item represented by the file (see “component” chart).
 * **Example:** The file representing the second take of the second part of the third stream of the second region of the second face of an item marked as volume 1 is named as myd_259382_v01f02r02s03p02t02_pm.wav.
 
+<a name="file-role"></a>
 ####  File role
 * A file name must record its intended use using one of the following codes.
   * pm: Preservation Master, created for every physical media item
   * em: Edit Master, created for audio files
   * sc: Service Copy, created for video files
 
+<a name="item-component-chart"></a>
 #### Item component chart
 
 |Component | Formats | Note|
@@ -387,11 +434,13 @@ Please refer to the following usage guide for the various "notes" fields include
 
 <a name="digital-asset-packaging"></a>
 ### Digital asset packaging
+<a name="primary-root-directories"></a>
 #### Primary root directories
 * Deliverables must be separated by media type and stored in directories "Audio" and "Video"
 * Audio and Video directories must be stored in the root directory of the hard drive, and must ONLY contain completed bags.
   * Examples: If a drive contains both audio and video bags, both directories must be present; if a drive only contains video bags, they must be within a "Video" directory (no empty directories).
 
+<a name="sample-root-directory-structure-that-contains-all-possible-bags"></a>
 #### Sample root directory structure that contains all possible bags:
 
 **HDD_uniqueID**
@@ -400,6 +449,7 @@ Please refer to the following usage guide for the various "notes" fields include
 * Video
   * PrimaryID
 
+<a name="bagit-requirements"></a>
 #### Bagit requirements
 * All files produced by digitization must be delivered in valid Bags. See the BagIt File Packaging Format (V0.97) at https://tools.ietf.org/html/draft-kunze-bagit-13.
 * The bag name must be the Primary ID of the physical object represented by the files in the bag. (Do not use the filename root.)
