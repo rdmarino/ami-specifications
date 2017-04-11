@@ -46,8 +46,7 @@ This document outlines the technical specifications and requirements for digitiz
     - [Primary root directories](#primary-root-directories)
     - [Sample root directory structure that contains all possible bags:](#sample-root-directory-structure-that-contains-all-possible-bags)
     - [Bagit requirements](#bagit-requirements)
- - [Section E. Directory Structure Examples](#Section-E.-Directory-Structure-Examples)
-
+- [Section E. Directory Structure Examples](#section-e-directory-structure-examples)
 
 <!-- /MarkdownTOC -->
 
@@ -470,9 +469,9 @@ Please refer to the following usage guide for the various "notes" fields include
   * The bag should be created with a tool using BagIt Library 4.4 or higher.
   * The bag may include tagmanifest files. Some bagging software produces these files automatically. It is not required to produce or delete these files.
 
-<a name="Section-E.-Directory-Structure-Examples"></a>
-  ## Section E. Directory Structure Examples
-  The following are several examples of deliverable bag structures as expected by NYPL.
+<a name="section-e-directory-structure-examples"></a>
+## Section E. Directory Structure Examples
+The following are several examples of deliverable bag structures as expected by NYPL.
 
 ![Sample Audio Directory Structure: Groups 1 & 2 ](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleAudioDirectoryStructure_gp1-2.jpg)
 
