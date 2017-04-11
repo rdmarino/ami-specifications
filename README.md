@@ -380,7 +380,7 @@ Please refer to the following usage guide for the various "notes" fields include
 <a name="audio-channel--tack-configurations-and-terminology-matrix"></a>
 #### Audio channel / tack configurations and terminology matrix
 
-![Audio grid](NYPL_audioGrid_2017.jpg)
+![Audio grid](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/NYPL_audioGrid_2017.jpg)
 
 <a name="section-d-digital-asset-structure"></a>
 ## Section D: Digital Asset Structure
