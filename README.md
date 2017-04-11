@@ -469,4 +469,14 @@ Please refer to the following usage guide for the various "notes" fields include
   * The bag may include tagmanifest files. Some bagging software produces these files automatically. It is not required to produce or delete these files.
 
   ## Section E. Directory Structure Examples
-  The following are several examples of deliverable bag structures as expected by NYPL. 
+  The following are several examples of deliverable bag structures as expected by NYPL.
+
+![Sample Audio Directory Structure: Groups 1 & 2 ](SampleAudioDirectoryStructure_gp1-2.jpg)
+
+![Sample Audio Directory Structure: Group 3](SampleAudioDirectoryStructure_gp3.jpg)
+
+![Sample Video Directory Structure: Group 1](SampleVideoDirectoryStructure_gp1.jpg)
+
+![Sample Video Directory Structure: with Closed Captioning](SampleVideoDirectoryStructure_video_CC.jpg)
+
+![Sample Video Directory Structure: with Image Directory](SampleVideoDirectoryStructure_video_imageDir.jpg)
