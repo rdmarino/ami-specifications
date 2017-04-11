@@ -471,12 +471,12 @@ Please refer to the following usage guide for the various "notes" fields include
   ## Section E. Directory Structure Examples
   The following are several examples of deliverable bag structures as expected by NYPL.
 
-![Sample Audio Directory Structure: Groups 1 & 2 ](SampleAudioDirectoryStructure_gp1-2.jpg)
+![Sample Audio Directory Structure: Groups 1 & 2 ](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleAudioDirectoryStructure_gp1-2.jpg)
 
-![Sample Audio Directory Structure: Group 3](SampleAudioDirectoryStructure_gp3.jpg)
+![Sample Audio Directory Structure: Group 3](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleAudioDirectoryStructure_gp3.jpg)
 
-![Sample Video Directory Structure: Group 1](SampleVideoDirectoryStructure_gp1.jpg)
+![Sample Video Directory Structure: Group 1](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleVideoDirectoryStructure_gp1.jpg)
 
-![Sample Video Directory Structure: with Closed Captioning](SampleVideoDirectoryStructure_video_CC.jpg)
+![Sample Video Directory Structure: with Closed Captioning](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleVideoDirectoryStructure_video_CC.jpg)
 
-![Sample Video Directory Structure: with Image Directory](SampleVideoDirectoryStructure_video_imageDir.jpg)
+![Sample Video Directory Structure: with Image Directory](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleVideoDirectoryStructure_video_imageDir.jpg)
