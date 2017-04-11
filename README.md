@@ -1,6 +1,6 @@
 # Digital Asset Technical Specifications
 
-This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corressponding information about shipping, handeling, and documentation / reporting, please see:
+This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corressponding information about shipping, handling and reporting, please see:
 
 ![ami-handling](https://github.com/NYPL/ami-handling)
 
