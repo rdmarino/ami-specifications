@@ -7,7 +7,7 @@ This document outlines the technical specifications and requirements for digitiz
 ## Table Of Contents
 <!-- MarkdownTOC -->
 
-- [Digital Asset Technical Specifications: Audio](#digital-asset-technical-specifications-audio)
+- [Section A: Audio](#section-a-audio)
   - [General information: audio](#general-information-audio)
   - [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
     - [General audio guidelines](#general-audio-guidelines)
@@ -19,7 +19,7 @@ This document outlines the technical specifications and requirements for digitiz
   - [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
     - [Edit Master Alterations](#edit-master-alterations)
     - [All audio groups](#all-audio-groups)
-- [Digital Asset Technical Specifications: Video](#digital-asset-technical-specifications-video)
+- [Section B: Video](#section-b-video)
   - [General information: video](#general-information-video)
   - [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
     - [General guidelines](#general-guidelines)
@@ -28,14 +28,14 @@ This document outlines the technical specifications and requirements for digitiz
     - [Video group 3](#video-group-3)
   - [Service Copy file specifications: video](#service-copy-file-specifications-video)
     - [All video groups](#all-video-groups)
-- [Digital Asset Technical Specifications: Metadata](#digital-asset-technical-specifications-metadata)
+- [Section C: Metadata](#section-c-metadata)
   - [Metadata specifications](#metadata-specifications)
     - [Metadata file specifications](#metadata-file-specifications)
     - [Metadata content](#metadata-content)
     - [JSON "Notes" Fields](#json-notes-fields)
     - [Metadata errors](#metadata-errors)
     - [Audio channel / tack configurations and terminology matrix](#audio-channel--tack-configurations-and-terminology-matrix)
-- [Digital Asset Structure](#digital-asset-structure)
+- [Section D: Digital Asset Structure](#section-d-digital-asset-structure)
   - [File name and file structure specifications](#file-name-and-file-structure-specifications)
     - [File names](#file-names)
     - [Item structure](#item-structure)
@@ -51,8 +51,8 @@ This document outlines the technical specifications and requirements for digitiz
 
 
 
-<a name="digital-asset-technical-specifications-audio"></a>
-## Digital Asset Technical Specifications: Audio
+<a name="section-a-audio"></a>
+## Section A: Audio
 
 <a name="general-information-audio"></a>
 ### General information: audio
@@ -178,8 +178,8 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 **File size limitation:**
 * Some Edit Masters may be larger than their Preservation Masters. Due to the 4GB file size limit for WAV, the resulting change in file size may require creation of multiple Edit Masters for a single Preservation Master. See Specific NYPL Requirements for Preservation Masters above.
 
-<a name="digital-asset-technical-specifications-video"></a>
-## Digital Asset Technical Specifications: Video
+<a name="section-b-video"></a>
+## Section B: Video
 
 <a name="general-information-video"></a>
 ### General information: video
@@ -325,8 +325,8 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 * Long tails of black / unrecorded content may be trimmed after confirmation that there is no visible or audible recorded content.
 * Trimming should not result in an abrupt end of visible or audible content.
 
-<a name="digital-asset-technical-specifications-metadata"></a>
-## Digital Asset Technical Specifications: Metadata
+<a name="section-c-metadata"></a>
+## Section C: Metadata
 <a name="metadata-specifications"></a>
 ### Metadata specifications
 **Note:** Specifications may be modified to reflect found media, newly discovered issues, changes in best practices, or NYPL goals.
@@ -382,8 +382,8 @@ Please refer to the following usage guide for the various "notes" fields include
 
 ![Audio grid](NYPL_audioGrid_2017.jpg)
 
-<a name="digital-asset-structure"></a>
-## Digital Asset Structure
+<a name="section-d-digital-asset-structure"></a>
+## Section D: Digital Asset Structure
 
 <a name="file-name-and-file-structure-specifications"></a>
 ### File name and file structure specifications
