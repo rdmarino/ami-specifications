@@ -471,7 +471,7 @@ Please refer to the following usage guide for the various "notes" fields include
 
 <a name="section-e-directory-structure-examples"></a>
 ## Section E. Directory Structure Examples
-The following are several examples of deliverable bag structures as expected by NYPL.
+The following are several examples of directory structures as expected by NYPL.
 
 ![Sample Audio Directory Structure: Groups 1 & 2 ](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/SampleAudioDirectoryStructure_gp1-2.jpg)
 
