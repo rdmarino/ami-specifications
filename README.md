@@ -1,4 +1,4 @@
-# Digital Asset Technical Specifications
+# NYPL Audiovisual Preservation - Digital Asset Technical Specifications
 
 This document outlines the technical specifications and requirements for digitization of analog media collections and digital packaging of deliverable files. For corresponding information about shipping, handling and reporting, please see:
 
