@@ -307,11 +307,14 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 | Frame rate | (same as Preservation Master)|
 | Frame size | (same as Preservation Master) |
 | Broadcast standard | (same as original media)|
-| Pixel Aspect Ratio | (same as Preservation Master)|
+| Pixel Aspect Ratio | (same as Preservation Master, **see below for Anamorphic video**)|
 | Audio Codec | AAC |
 | Audio Bit Rate | 192 kbps|
 | Audio sampling rate | 48 kHz|
 | Audio channels | 2 (see examples)|
+
+##### Anamorphic video
+* For Service Copies created from Anamorphic Preservation Masters, treat source as D1/DV NTSC or PAL Widescreen to produce a 16 x 9 Service Copy without padding. Pixel Aspect Ratio should be 1.21 (NTSC) / 1.46 (PAL).
 
 ##### Audio channels
 * 4 identical channels of audio on source:
