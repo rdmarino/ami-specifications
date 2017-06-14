@@ -129,7 +129,7 @@ This document outlines the technical specifications and requirements for digitiz
 * **Example:** a DAT recorded at 48/16 should be captured as a 48/16 Broadcast WAV file.
 
 <a name="audio-group-3-optical"></a>
-#### Audio group 3: optical audio
+#### Audio group 3: optical
 ##### Format types: optical discs
 
 ##### File specifications [implement 2017]
