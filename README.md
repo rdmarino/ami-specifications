@@ -131,26 +131,15 @@ This document outlines the technical specifications and requirements for digitiz
 <a name="audio-group-3-optical"></a>
 #### Audio group 3: optical audio
 ##### Format types: optical discs
-##### File specifications: [deprecate in 2017]
-* CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
 
 ##### File specifications [implement 2017]
 * Format: WAV/CUE
 * CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
-* In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file.
-  * The CUE file must:
-    * Follow the same naming convention as the WAV file, but instead with a ".cue" extension.
-    * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
-    * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
-      * Example: "myh_123456_v01_pm.cue"
-
-=======
 * In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
-  * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01_pm.cue"
+  * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01f01_pm.cue"
   * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
   * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
 
->>>>>>> origin/master
 ##### Additional details
 * If CD-ROMs or hybrid CDs (multimedia+audio) are discovered during the Contractor’s review of physical objects, the Contractor should contact NYPL to discuss adjustments to the migration strategy.
 * Edit Masters for all audio CDs should adhere to the specifications below, with content delivered as a single Broadcast Wave file that matches the bit depth and sampling rate of the original object.
@@ -224,23 +213,6 @@ If present on the source tape, closed captions must be captured.
 <a name="video-group-1"></a>
 #### Video group 1
 ##### Format types: analog and digital cassettes, analog open reel
-##### File specifications: 10-bit [deprecate in 2017]
-
-|Attribute | Specification |
-| --- | ----|
-| Video codec |10-bit uncompressed YUV (v210)|
-| Data compression | none (1:1, uncompressed)|
-| Chroma subsampling | 4:2:2 YUV |
-| Bit depth | 10-bit |
-| File wrapper | QuickTime (.mov) |
-| Frame rate | (same as original media)|
-| Frame size | (same as original media) |
-| Broadcast standard | (same as original media) |
-| Pixel Aspect Ratio | D1 NTSC (.91) or PAL (1.09)|
-| Audio format | PCM |
-| Audio bit depth | 24-bit|
-| Audio sampling rate | 48 kHz|
-| Audio channels | (same as original media, see guidelines for silent channels)|
 
 ##### File specifications: FFv1 [implement in 2017]
 
@@ -275,15 +247,6 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 <a name="video-group-2"></a>
 #### Video group 2
 ##### Format types:  DV (digital video) cassettes
-
-##### File specifications: 10-bit [deprecate in 2017]
-
-|Attribute | Specification |
-| --- | ----|
-| Video codec |(same as source)|
-| File wrapper | QuickTime (.mov)|
-| Other characteristics | (same as source) |
-
 
 ##### File specifications: FFv1 [implement in 2017]
 
