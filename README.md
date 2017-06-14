@@ -137,20 +137,19 @@ This document outlines the technical specifications and requirements for digitiz
 ##### File specifications [implement 2017]
 * Format: WAV/CUE
 * CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
-<<<<<<< HEAD
 * In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file.
   * The CUE file must:
     * Follow the same naming convention as the WAV file, but instead with a ".cue" extension.
     * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
     * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
       * Example: "myh_123456_v01_pm.cue"
-      
+
 =======
 * In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
   * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01_pm.cue"
   * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
   * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
-  
+
 >>>>>>> origin/master
 ##### Additional details
 * If CD-ROMs or hybrid CDs (multimedia+audio) are discovered during the Contractor’s review of physical objects, the Contractor should contact NYPL to discuss adjustments to the migration strategy.
