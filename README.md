@@ -129,11 +129,17 @@ This document outlines the technical specifications and requirements for digitiz
 * **Example:** a DAT recorded at 48/16 should be captured as a 48/16 Broadcast WAV file.
 
 <a name="audio-group-3-optical"></a>
-#### Audio group 3: optical
+#### Audio group 3: optical audio
 ##### Format types: optical discs
 ##### File specifications: [deprecate in 2017]
 * CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
-* In addition, the vendor will create a corresponding AES31-3 ADL for each CD.
+* In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file.
+ * The CUE file must:
+  * Follow the same naming convention as the WAV file, but instead with a ".cue" extension.
+  * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
+  * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
+   * Example: "myh_123456_v01_pm.cue"
+   
 ##### File specifications [implement 2017]
 * Format: BIN/CUE
 * Raw disc information (BIN) plus metadata as a text log of track separations within disc image (CUE)
