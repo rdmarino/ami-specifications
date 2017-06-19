@@ -34,7 +34,7 @@ This document outlines the technical specifications and requirements for digitiz
     - [Metadata content](#metadata-content)
     - [JSON "Notes" Fields](#json-notes-fields)
     - [Metadata errors](#metadata-errors)
-    - [Audio channel / tack configurations and terminology matrix](#audio-channel--tack-configurations-and-terminology-matrix)
+    - [Audio channel and track configurations terminology matrix](#audio-channel-and-track-configurations-terminology-matrix)
 - [Section D: Digital Asset Structure](#section-d-digital-asset-structure)
   - [File name and file structure specifications](#file-name-and-file-structure-specifications)
     - [File names](#file-names)
@@ -358,8 +358,8 @@ Please refer to the following usage guide for the various "notes" fields include
 * If misidentified/miscataloged the technical characteristics or format of an asset have been provided (i.e. NYPL-generated metadata lists an asset as an audio cassette and it is actually a video recording), please submit corrected JSON. Make any changes to source object metadata elements that would be appropriate, and note the correction in the JSON files "digitization.notes.processNotes". Example text:
   * "NYPL-provided metadata incorrectly listed [insert field name here] as [insert wrong content here]; JSON reflects correct [field name]"
 
-<a name="audio-channel--tack-configurations-and-terminology-matrix"></a>
-#### Audio channel / tack configurations and terminology matrix
+<a name="audio-channel-and-track-configurations-terminology-matrix"></a>
+#### Audio channel and track configurations terminology matrix
 
 ![Audio grid](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/NYPL_audioGrid_2017.jpg)
 
