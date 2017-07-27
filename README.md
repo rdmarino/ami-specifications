@@ -161,7 +161,6 @@ The Edit Master will be altered from the Preservation Master in the following wa
 When balance and/or overall level are insufficient a peak level adjustment of max. -2db may be implemented as necessary.
 ##### Channel adjustment
 * Ensuring that "mono" is true mono
-* Conversion of one-channel audio to two-channel audio (i.e. mono to dual-mono).
 
 <a name="all-audio-groups"></a>
 #### All audio groups
