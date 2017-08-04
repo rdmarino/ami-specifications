@@ -252,7 +252,7 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 |Attribute | Specification |
 | --- | ----|
 | Video codec |(same as source)|
-| File wrapper | Matroska (.mkv)|
+| File wrapper | DV (.dv)|
 | Other characteristics | (same as source) |
 
 ##### Examples
