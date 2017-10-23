@@ -8,44 +8,44 @@ This document outlines the technical specifications and requirements for digitiz
 <!-- MarkdownTOC -->
 
 - [Section A: Audio](#section-a-audio)
-  - [General information: audio](#general-information-audio)
-  - [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
-    - [General audio guidelines](#general-audio-guidelines)
-    - [Specific NYPL Requirements](#specific-nypl-requirements)
-    - [Signal extraction](#signal-extraction)
-    - [Audio group 1: analog audio](#audio-group-1-analog-audio)
-    - [Audio group 2: digital audio](#audio-group-2-digital-audio)
-    - [Audio group 3: optical](#audio-group-3-optical)
-  - [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
-    - [Edit Master Alterations](#edit-master-alterations)
-    - [All audio groups](#all-audio-groups)
+	- [General information: audio](#general-information-audio)
+	- [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
+		- [General audio guidelines](#general-audio-guidelines)
+		- [Specific NYPL Requirements](#specific-nypl-requirements)
+		- [Signal extraction](#signal-extraction)
+		- [Audio group 1: analog audio](#audio-group-1-analog-audio)
+		- [Audio group 2: digital audio](#audio-group-2-digital-audio)
+		- [Audio group 3: optical](#audio-group-3-optical)
+	- [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
+		- [Edit Master Alterations](#edit-master-alterations)
+		- [All audio groups](#all-audio-groups)
 - [Section B: Video](#section-b-video)
-  - [General information: video](#general-information-video)
-  - [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
-    - [General guidelines](#general-guidelines)
-    - [Video group 1](#video-group-1)
-    - [Video group 2](#video-group-2)
-    - [Video group 3](#video-group-3)
-  - [Service Copy file specifications: video](#service-copy-file-specifications-video)
-    - [All video groups](#all-video-groups)
+	- [General information: video](#general-information-video)
+	- [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
+		- [General guidelines](#general-guidelines)
+		- [Video group 1](#video-group-1)
+		- [Video group 2](#video-group-2)
+		- [Video group 3](#video-group-3)
+	- [Service Copy file specifications: video](#service-copy-file-specifications-video)
+		- [All video groups](#all-video-groups)
 - [Section C: Metadata](#section-c-metadata)
-  - [Metadata specifications](#metadata-specifications)
-    - [Metadata file specifications](#metadata-file-specifications)
-    - [Metadata content](#metadata-content)
-    - [JSON "Notes" Fields](#json-notes-fields)
-    - [Metadata errors](#metadata-errors)
-    - [Audio channel and track configurations terminology matrix](#audio-channel-and-track-configurations-terminology-matrix)
+	- [Metadata specifications](#metadata-specifications)
+		- [Metadata file specifications](#metadata-file-specifications)
+		- [Metadata content](#metadata-content)
+		- [JSON "Notes" Fields](#json-notes-fields)
+		- [Metadata errors](#metadata-errors)
+		- [Audio channel and track configurations terminology matrix](#audio-channel-and-track-configurations-terminology-matrix)
 - [Section D: Digital Asset Structure](#section-d-digital-asset-structure)
-  - [File name and file structure specifications](#file-name-and-file-structure-specifications)
-    - [File names](#file-names)
-    - [Item structure](#item-structure)
-    - [File role](#file-role)
-    - [Item component chart](#item-component-chart)
-  - [Digital asset delivery](#digital-asset-delivery)
-  - [Digital asset packaging](#digital-asset-packaging)
-    - [Primary root directories](#primary-root-directories)
-    - [Sample root directory structure that contains all possible bags:](#sample-root-directory-structure-that-contains-all-possible-bags)
-    - [Bagit requirements](#bagit-requirements)
+	- [File name and file structure specifications](#file-name-and-file-structure-specifications)
+		- [File names](#file-names)
+		- [Item structure](#item-structure)
+		- [File role](#file-role)
+		- [Item component chart](#item-component-chart)
+	- [Digital asset delivery](#digital-asset-delivery)
+	- [Digital asset packaging](#digital-asset-packaging)
+		- [Primary root directories](#primary-root-directories)
+		- [Sample root directory structure that contains all possible bags:](#sample-root-directory-structure-that-contains-all-possible-bags)
+		- [Bagit requirements](#bagit-requirements)
 - [Section E. Directory Structure Examples](#section-e-directory-structure-examples)
 
 <!-- /MarkdownTOC -->
@@ -247,18 +247,20 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 <a name="video-group-2"></a>
 #### Video group 2
 ##### Format types:  DV (digital video) cassettes
+NYPL prefers native capture of DV content, with the understanding that errors and varying conditions may require alternative appraoches to signal capture. Below are our primary specifications, followed by specifications when native DV capture with .dv wrapper is problematic due to problems with a given object.
 
 ##### File specifications: FFv1 [implement in 2017]
 
 |Attribute | Specification |
 | --- | ----|
-| Video codec |(same as source)|
-| File wrapper | DV (.dv)|
+| Video codec |(same as source)*|
+| File wrapper | DV (.dv)*|
 | Other characteristics | (same as source) |
 
-##### Examples
-* DV/MiniDV objects should be captured with the DV codec
-* DVCPRO objects with the DVCPRO codec, etc.  
+\* See "Problem tapes" below.
+
+##### Problem DV / HDV Tapes
+* If it is necessary to capture DV or HDV tapes via SDI (as “.mov”),  deliverables must be rewrapped as “.mkv”.
 
 <a name="video-group-3"></a>
 #### Video group 3
