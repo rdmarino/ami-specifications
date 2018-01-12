@@ -8,44 +8,44 @@ This document outlines the technical specifications and requirements for digitiz
 <!-- MarkdownTOC -->
 
 - [Section A: Audio](#section-a-audio)
-	- [General information: audio](#general-information-audio)
-	- [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
-		- [General audio guidelines](#general-audio-guidelines)
-		- [Specific NYPL Requirements](#specific-nypl-requirements)
-		- [Signal extraction](#signal-extraction)
-		- [Audio group 1: analog audio](#audio-group-1-analog-audio)
-		- [Audio group 2: digital audio](#audio-group-2-digital-audio)
-		- [Audio group 3: optical](#audio-group-3-optical)
-	- [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
-		- [Edit Master Alterations](#edit-master-alterations)
-		- [All audio groups](#all-audio-groups)
+  - [General information: audio](#general-information-audio)
+  - [Preservation Master file specifications: audio](#preservation-master-file-specifications-audio)
+    - [General audio guidelines](#general-audio-guidelines)
+    - [Specific NYPL Requirements](#specific-nypl-requirements)
+    - [Signal extraction](#signal-extraction)
+    - [Audio group 1: analog audio](#audio-group-1-analog-audio)
+    - [Audio group 2: digital audio](#audio-group-2-digital-audio)
+    - [Audio group 3: optical](#audio-group-3-optical)
+  - [Edit Master file specifications: audio](#edit-master-file-specifications-audio)
+    - [Edit Master Alterations](#edit-master-alterations)
+    - [All audio groups](#all-audio-groups)
 - [Section B: Video](#section-b-video)
-	- [General information: video](#general-information-video)
-	- [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
-		- [General guidelines](#general-guidelines)
-		- [Video group 1](#video-group-1)
-		- [Video group 2](#video-group-2)
-		- [Video group 3](#video-group-3)
-	- [Service Copy file specifications: video](#service-copy-file-specifications-video)
-		- [All video groups](#all-video-groups)
+  - [General information: video](#general-information-video)
+  - [Preservation Master file specifications: video](#preservation-master-file-specifications-video)
+    - [General guidelines](#general-guidelines)
+    - [Video group 1](#video-group-1)
+    - [Video group 2](#video-group-2)
+    - [Video group 3](#video-group-3)
+  - [Service Copy file specifications: video](#service-copy-file-specifications-video)
+    - [All video groups](#all-video-groups)
 - [Section C: Metadata](#section-c-metadata)
-	- [Metadata specifications](#metadata-specifications)
-		- [Metadata file specifications](#metadata-file-specifications)
-		- [Metadata content](#metadata-content)
-		- [JSON "Notes" Fields](#json-notes-fields)
-		- [Metadata errors](#metadata-errors)
-		- [Audio channel and track configurations terminology matrix](#audio-channel-and-track-configurations-terminology-matrix)
+  - [Metadata specifications](#metadata-specifications)
+    - [Metadata file specifications](#metadata-file-specifications)
+    - [Metadata content](#metadata-content)
+    - [JSON "Notes" Fields](#json-notes-fields)
+    - [Metadata errors](#metadata-errors)
+    - [Audio channel / tack configurations and terminology matrix](#audio-channel--tack-configurations-and-terminology-matrix)
 - [Section D: Digital Asset Structure](#section-d-digital-asset-structure)
-	- [File name and file structure specifications](#file-name-and-file-structure-specifications)
-		- [File names](#file-names)
-		- [Item structure](#item-structure)
-		- [File role](#file-role)
-		- [Item component chart](#item-component-chart)
-	- [Digital asset delivery](#digital-asset-delivery)
-	- [Digital asset packaging](#digital-asset-packaging)
-		- [Primary root directories](#primary-root-directories)
-		- [Sample root directory structure that contains all possible bags:](#sample-root-directory-structure-that-contains-all-possible-bags)
-		- [Bagit requirements](#bagit-requirements)
+  - [File name and file structure specifications](#file-name-and-file-structure-specifications)
+    - [File names](#file-names)
+    - [Item structure](#item-structure)
+    - [File role](#file-role)
+    - [Item component chart](#item-component-chart)
+  - [Digital asset delivery](#digital-asset-delivery)
+  - [Digital asset packaging](#digital-asset-packaging)
+    - [Primary root directories](#primary-root-directories)
+    - [Sample root directory structure that contains all possible bags:](#sample-root-directory-structure-that-contains-all-possible-bags)
+    - [Bagit requirements](#bagit-requirements)
 - [Section E. Directory Structure Examples](#section-e-directory-structure-examples)
 
 <!-- /MarkdownTOC -->
@@ -86,8 +86,7 @@ This document outlines the technical specifications and requirements for digitiz
   * **Region:** For an object with two regions recorded at different speeds, a separate PM must be created for each Region (filename_v01f01r01_pm).
   * **Part:** When a recording must be divided into parts due to file size limitations (4GB WAV limit), a separate Preservation Master file must be created for each Part.
   * There may be rare circumstances in which just the Edit Master from a PM will exceed the 4GB WAV limit (i.e. when mixing mono to stereo). In this case, the Edit Master must be split into multiple Parts, but the PM should not be split or captured as multiple parts - it must remain a single file. A note must be added to the metadata deliverables describing this circumstance.
-  * **File overlap: Speed Changes & Size limitation** If multiple PMs are created for a single recording due to speed changes, or size limitations (Regions or Parts), the cut should be made at a logical break in the audible content (if at all possible), and there must be exactly 5 seconds of audible content overlapping between the tail of the first PM and the head of the following PM so that the regions/parts may be recombined in the future if necessary.
-  * **Sampling Rate Changes:** If a digital source object has been recorded at multiple sampling rates, a separate PM must be created for each region. These regions do not need to overlap, but please include a note listing the timestamp won the source object where each region begins.
+  * **File overlap:** If multiple PMs are created for a single recording due to either speed changes or size limitations (Regions or Parts), the cut should be made at a logical break in the audible content (if at all possible), and there must be exactly 5 seconds of audible content overlapping between the tail of the first PM and the head of the following PM so that the regions/parts may be recombined in the future if necessary.
 
 <a name="signal-extraction"></a>
 #### Signal extraction
@@ -130,17 +129,27 @@ This document outlines the technical specifications and requirements for digitiz
 * **Example:** a DAT recorded at 48/16 should be captured as a 48/16 Broadcast WAV file.
 
 <a name="audio-group-3-optical"></a>
-#### Audio group 3: optical
+#### Audio group 3: optical audio
 ##### Format types: optical discs
+##### File specifications: [deprecate in 2017]
+* CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
 
 ##### File specifications [implement 2017]
 * Format: WAV/CUE
 * CDs should be captured as a single Broadcast WAV file that matches the bit depth and sampling rate of the original object.
 * In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
-  * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01f01_pm.cue"
+    * Follow the same naming convention as the WAV file, but instead with a ".cue" extension.
+    * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
+    * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
+      * Example: "myh_123456_v01_pm.cue"
+
+=======
+* In addition, the vendor will create a corresponding CUE file for the Preservation Master WAV file. The CUE file must:
+  * Follow the same naming convention as the WAV file, but instead with a ".cue" extension. Example: "myh_123456_v01_pm.cue"
   * Be nested within the Preservation Masters directory, accompanying the Preservation Master WAV file (the Edit master must not have a .cue file).
   * Be referenced in the JSON file under the technical.cueFile filed, by its complete filename.
 
+>>>>>>> origin/master
 ##### Additional details
 * If CD-ROMs or hybrid CDs (multimedia+audio) are discovered during the Contractor’s review of physical objects, the Contractor should contact NYPL to discuss adjustments to the migration strategy.
 * Edit Masters for all audio CDs should adhere to the specifications below, with content delivered as a single Broadcast Wave file that matches the bit depth and sampling rate of the original object.
@@ -162,6 +171,7 @@ The Edit Master will be altered from the Preservation Master in the following wa
 When balance and/or overall level are insufficient a peak level adjustment of max. -2db may be implemented as necessary.
 ##### Channel adjustment
 * Ensuring that "mono" is true mono
+* Conversion of one-channel audio to two-channel audio (i.e. mono to dual-mono).
 
 <a name="all-audio-groups"></a>
 #### All audio groups
@@ -192,6 +202,7 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 * For each original video recording, the following shall be produced:
 ** one Preservation Master file
 ** one Service Copy file
+** one QCTools report accompanying Preservation Master file
 
 <a name="preservation-master-file-specifications-video"></a>
 ### Preservation Master file specifications: video
@@ -213,6 +224,23 @@ If present on the source tape, closed captions must be captured.
 <a name="video-group-1"></a>
 #### Video group 1
 ##### Format types: analog and digital cassettes, analog open reel
+##### File specifications: 10-bit [deprecate in 2017]
+
+|Attribute | Specification |
+| --- | ----|
+| Video codec |10-bit uncompressed YUV (v210)|
+| Data compression | none (1:1, uncompressed)|
+| Chroma subsampling | 4:2:2 YUV |
+| Bit depth | 10-bit |
+| File wrapper | QuickTime (.mov) |
+| Frame rate | (same as original media)|
+| Frame size | (same as original media) |
+| Broadcast standard | (same as original media) |
+| Pixel Aspect Ratio | D1 NTSC (.91) or PAL (1.09)|
+| Audio format | PCM |
+| Audio bit depth | 24-bit|
+| Audio sampling rate | 48 kHz|
+| Audio channels | (same as original media, see guidelines for silent channels)|
 
 ##### File specifications: FFv1 [implement in 2017]
 
@@ -247,20 +275,27 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 <a name="video-group-2"></a>
 #### Video group 2
 ##### Format types:  DV (digital video) cassettes
-NYPL prefers native capture of DV content, with the understanding that errors and varying conditions may require alternative appraoches to signal capture. Below are our primary specifications, followed by specifications when native DV capture with .dv wrapper is problematic due to problems with a given object.
+
+##### File specifications: 10-bit [deprecate in 2017]
+
+|Attribute | Specification |
+| --- | ----|
+| Video codec |(same as source)|
+| File wrapper | QuickTime (.mov)|
+| Other characteristics | (same as source) |
+
 
 ##### File specifications: FFv1 [implement in 2017]
 
 |Attribute | Specification |
 | --- | ----|
-| Video codec |(same as source)*|
-| File wrapper | DV (.dv)*|
+| Video codec |(same as source)|
+| File wrapper | Matroska (.mkv)|
 | Other characteristics | (same as source) |
 
-\* See "Problem tapes" below.
-
-##### Problem DV / HDV Tapes
-* If it is necessary to capture DV or HDV tapes via SDI (as “.mov”),  deliverables must be rewrapped as “.mkv”.
+##### Examples
+* DV/MiniDV objects should be captured with the DV codec
+* DVCPRO objects with the DVCPRO codec, etc.  
 
 <a name="video-group-3"></a>
 #### Video group 3
@@ -360,8 +395,8 @@ Please refer to the following usage guide for the various "notes" fields include
 * If misidentified/miscataloged the technical characteristics or format of an asset have been provided (i.e. NYPL-generated metadata lists an asset as an audio cassette and it is actually a video recording), please submit corrected JSON. Make any changes to source object metadata elements that would be appropriate, and note the correction in the JSON files "digitization.notes.processNotes". Example text:
   * "NYPL-provided metadata incorrectly listed [insert field name here] as [insert wrong content here]; JSON reflects correct [field name]"
 
-<a name="audio-channel-and-track-configurations-terminology-matrix"></a>
-#### Audio channel and track configurations terminology matrix
+<a name="audio-channel--tack-configurations-and-terminology-matrix"></a>
+#### Audio channel / tack configurations and terminology matrix
 
 ![Audio grid](https://github.com/NYPL/ami-specifications/blob/master/ami-specificationsImages/NYPL_audioGrid_2017.jpg)
 
