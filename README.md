@@ -200,9 +200,9 @@ When balance and/or overall level are insufficient a peak level adjustment of ma
 * Specifications may be modified over time to reflect changes in best practices or NYPL’s digital infrastructure, or to reflect previously unspecified media or conditions.
 * Formats are broken into Groups which help define the file deliverables (mainly the preservation masters) See the full list.
 * For each original video recording, the following shall be produced:
-** one Preservation Master file
-** one Service Copy file
-** one QCTools report accompanying Preservation Master file
+  * one Preservation Master file
+  * one Service Copy file
+  * one QCTools report accompanying Preservation Master file
 
 <a name="preservation-master-file-specifications-video"></a>
 ### Preservation Master file specifications: video
