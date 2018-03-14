@@ -27,7 +27,8 @@ This document outlines the technical specifications and requirements for digitiz
     - [Video group 2](#video-group-2)
     - [Video group 3](#video-group-3)
   - [Service Copy file specifications: video](#service-copy-file-specifications-video)
-    - [All video groups](#all-video-groups)
+    - [Standard Definition video](#SD-video)
+    - [High Definition video](#HD-video)
 - [Section C: Metadata](#section-c-metadata)
   - [Metadata specifications](#metadata-specifications)
     - [Metadata file specifications](#metadata-file-specifications)
@@ -307,14 +308,34 @@ If detected as actual channels / i.e. recorded with "black" vs. not recorded), b
 ### Service Copy file specifications: video
 **Note:** As of 2016, NYPL uses Amazon Web Services (AWS) to deliver service copy files to patrons. Files are delivered to AWS via the Amazon Elastic Transcoder, by which the files pass through an additional level of transcoding. These specifications account for these automated post-digitization processes.
 
-<a name="all-video-groups"></a>
-#### All video groups
+<a name="SD-video"></a>
+#### Standard Definition video
 ##### File specifications
 
 |Attribute | Specification |
 | --- | ----|
 | Video codec | H.264/MPEG-4 AVC (ISO/IEC 14496-10 - MPEG4 Part 10, Advanced Video Coding) |
-| Video bit rate | 3.5 Mbit/second|
+| Video bit rate | 3.5 Mbps|
+| Chroma subsampling | 4:2:0 YUV |
+| Bit depth | 8-bit |
+| File wrapper | MP4 |
+| Frame rate | (same as Preservation Master)|
+| Frame size | (same as Preservation Master) |
+| Broadcast standard | (same as original media)|
+| Pixel Aspect Ratio | (same as Preservation Master, **see below for Anamorphic video**)|
+| Audio Codec | AAC |
+| Audio Bit Rate | 192 kbps|
+| Audio sampling rate | 48 kHz|
+| Audio channels | 2 (see examples)|
+
+<a name="HD-video"></a>
+#### High Definition video
+##### File specifications
+
+|Attribute | Specification |
+| --- | ----|
+| Video codec | H.264/MPEG-4 AVC (ISO/IEC 14496-10 - MPEG4 Part 10, Advanced Video Coding) |
+| Video bit rate | 8 Mbps|
 | Chroma subsampling | 4:2:0 YUV |
 | Bit depth | 8-bit |
 | File wrapper | MP4 |
